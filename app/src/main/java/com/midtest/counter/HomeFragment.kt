@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import org.w3c.dom.Text
@@ -36,9 +37,6 @@ class HomeFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
 
-
-
-
         }
     }
 
@@ -57,8 +55,14 @@ class HomeFragment : Fragment() {
         val buttonPlus: Button = view.findViewById(R.id.button_plus)
         val buttonMinus: Button = view.findViewById(R.id.button_minus)
         val countView: TextView = view.findViewById(R.id.count_view)
+        val buttonReset: ImageButton = view.findViewById(R.id.btn_reset)
+        val buttonEdit: ImageButton = view.findViewById(R.id.btn_edit)
+
+
         var numstart = 0
         countView.setText("" + numstart)
+        // code resource: https://ssaurel.medium.com/create-your-first-android-app-with-kotlin-64eb33854ce0
+
 
         //button plus
         buttonPlus.setOnClickListener{
@@ -66,7 +70,7 @@ class HomeFragment : Fragment() {
 //            countView.text = "2" //default text when onCreate is 2
             Toast.makeText(
                 activity,
-                "button minus clicked",
+                "button plus clicked",
                 Toast.LENGTH_SHORT
             ).show()
 
@@ -87,8 +91,22 @@ class HomeFragment : Fragment() {
         }
 
 
+        buttonReset.setOnClickListener{
+            Toast.makeText(
+                activity,
+                "RESET",
+                Toast.LENGTH_SHORT  ).show()
+
+            countView.setText("0")
+        }
 
 
+        buttonReset.setOnClickListener{
+            Toast.makeText(
+                activity,
+                "button edit clicked",
+                Toast.LENGTH_SHORT  ).show()
+        }
 
 
         }
