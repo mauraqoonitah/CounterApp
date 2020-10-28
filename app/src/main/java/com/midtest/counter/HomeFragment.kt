@@ -68,11 +68,6 @@ class HomeFragment : Fragment() {
         buttonPlus.setOnClickListener{
 //            val countView: TextView = view.findViewById(R.id.count_view)
 //            countView.text = "2" //default text when onCreate is 2
-            Toast.makeText(
-                activity,
-                "button plus clicked",
-                Toast.LENGTH_SHORT
-            ).show()
 
             countView.setText(""+ ++numstart)
 
@@ -81,11 +76,6 @@ class HomeFragment : Fragment() {
 
         // button minus
         buttonMinus.setOnClickListener{
-            Toast.makeText(
-                activity,
-                "button minus clicked",
-                Toast.LENGTH_SHORT
-            ).show()
 
             countView.setText(""+ --numstart)
         }
