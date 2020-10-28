@@ -101,7 +101,7 @@ class HomeFragment : Fragment() {
         }
 
 
-        buttonReset.setOnClickListener{
+        buttonEdit.setOnClickListener{
             Toast.makeText(
                 activity,
                 "button edit clicked",
